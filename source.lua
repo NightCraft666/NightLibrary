@@ -1,18 +1,12 @@
-local functions = {}
+local NightLib = {}
 
 -- Dodaj funkcję sumy
-functions.add = function(a, b)
-    return a + b
+NightLib.window = function()
+    NightLibGui = Instance.new("ScreenGui")
+    NightLibMainFrame = Instance.new("Frame")
+    NightLibMainFrame.Parent = NightLibGui
+    NightLibGui.Parent = game.Players.LocalPlayer.PlayerGui
 end
 
--- Dodaj funkcję mnożenia
-functions.multiply = function(a, b)
-    return a * b
-end
 
--- Dodaj funkcję powitania
-functions.greet = function(name)
-    return "Hello, " .. name .. "!"
-end
-
-return functions
+return NightLib
