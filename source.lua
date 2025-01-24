@@ -1,7 +1,7 @@
 local NightLib = {}
 
 -- Dodaj funkcję sumy
-NightLib.window = function()
+function NightLib:window()
     NightLibGui = Instance.new("ScreenGui")
     NightLibMainFrame = Instance.new("Frame")
     NightLibMainFrame.Parent = NightLibGui
