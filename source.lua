@@ -2,6 +2,11 @@
   OFFCIAL SOURCE CODE OF NIGHT LIBRARY!
 --]]
 
-function printuj()
-  print("Zocha ma jaja")
+local NightLib = {}
+
+function NightLib:printuj()
+    print("Działa!")
 end
+
+return NightLib
+
