@@ -1,12 +1,18 @@
---[[
-  OFFCIAL SOURCE CODE OF NIGHT LIBRARY!
---]]
+local functions = {}
 
-local NightLib = {}
-
-function NightLib:printuj()
-    print("Działa!")
+-- Dodaj funkcję sumy
+functions.add = function(a, b)
+    return a + b
 end
 
-return NightLib
+-- Dodaj funkcję mnożenia
+functions.multiply = function(a, b)
+    return a * b
+end
 
+-- Dodaj funkcję powitania
+functions.greet = function(name)
+    return "Hello, " .. name .. "!"
+end
+
+return functions
