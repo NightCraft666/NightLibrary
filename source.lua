@@ -19,6 +19,7 @@ function NightLib:window(LoadingText)
         NightLibLoadingText.Text = "NightLibrary"
     else
         NightLibLoadingText.Text = tostring(LoadingText)
+    end
 end
 
 
