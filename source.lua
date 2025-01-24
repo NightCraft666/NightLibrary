@@ -8,6 +8,7 @@ function NightLib:window()
     NightLibGui.Parent = game.Players.LocalPlayer.PlayerGui
     NightLibMainFrame.AnchorPoint = Vector2.new(0.5,0.5)
     NightLibMainFrame.Position = UDim2.new(0.5, 0,0.5, 0)
+    NightLibMainFrame.Size = UDim2.new(0, 406,0, 257)
 end
 
 
