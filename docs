@@ -1,0 +1,14 @@
+BOOTING THE LIBRARY:
+
+NightLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/NightCraft666/NightLibrary/refs/heads/main/source.lua"))()
+
+CREATING WINDOW:
+
+NightLib:window("NightGui")
+
+CREATING TAB:
+
+NightLib:tab("Player", nil)
+
+ADD THIS TO THE END:
+NightLib:endloading()
