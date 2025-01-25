@@ -75,7 +75,7 @@ NightLibGui = Instance.new("ScreenGui")
 	MainFrame.Parent = MainGui
 	MainFrame.Name = "MainFrame"
 	MainFrame.Size = UDim2.new(0, 406,0, 257)
-	MainFrame.Position = UDim2.new(0.5, 0,-0.4, 0)
+	MainFrame.Position = UDim2.new(0.5, 0,-0.5, 0)
 	MainFrame.BackgroundColor3 = Color3.new(0,0,0)
 	MainFrame.AnchorPoint = Vector2.new(0.5,0.5)
 	MainFrameCorner = Instance.new("UICorner")
@@ -88,6 +88,10 @@ NightLibGui = Instance.new("ScreenGui")
 	SmallBackground.BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)
 	SmallBackgroundCorner = Instance.new("UICorner")
 	SmallBackgroundCorner.Parent = SmallBackground
+	TabsNumberVariable = Instance.new("IntValue")
+	TabsNumberVariable.Parent = SmallBackground
+	TabsNumberVariable.Value = 0
+	TabsNumberVariable.Name = "TabsNumber"
 end
 function NightLib:endloading()
 	MainFrame:TweenPosition(UDim2.new(0.5,0,0.5,0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.7)
@@ -103,36 +107,70 @@ function NightLib:tab(Name,IconId)
 		print("Niepoprawny format!")
 	else
 		if IconId == nil then
-			if SmallBackground:FindFirstChild("MaxTabs") then
-				NightLibEndLoading()
-				while true do
-					wait(10000)
+			if SmallBackground:FindFirstChild("TabsNumber") then
+				if SmallBackground.TabsNumber.Value == 0 then
+					Tab1 = Instance.new("TextButton")
+					Tab1.Parent = SmallBackground
+					Tab1.Name = "Tab" .. Name
+					Tab1.Size = UDim2.new(0, 75,0, 31)
+					Tab1.Position = UDim2.new(0.162, 0,0.034, 0)
+					Tab1.BackgroundTransparency = 1
+					Tab1.Font = "FredokaOne"
+					Tab1.TextScaled = true
+					Tab1.Text = Name
+					Tab1.TextColor3 = Color3.new(1, 1, 1)
+					TabsNumberVariable.Value += 1
+				elseif SmallBackground.TabsNumber.Value == 1 then
+					Tab2 = Instance.new("TextButton")
+					Tab2.Parent = SmallBackground
+					Tab2.Name = "Tab" .. Name
+					Tab2.Size = UDim2.new(0, 75,0, 31)
+					Tab2.Position = UDim2.new(0.162, 0,0.228, 0)
+					Tab2.BackgroundTransparency = 1
+					Tab2.Font = "FredokaOne"
+					Tab2.TextScaled = true
+					Tab2.Text = Name
+					Tab2.TextColor3 = Color3.new(1, 1, 1)
+					TabsNumberVariable.Value += 1
+				elseif SmallBackground.TabsNumber.Value == 2 then
+					Tab3 = Instance.new("TextButton")
+					Tab3.Parent = SmallBackground
+					Tab3.Name = "Tab" .. Name
+					Tab3.Size = UDim2.new(0, 75,0, 31)
+					Tab3.Position = UDim2.new(0.162, 0,0.435, 0)
+					Tab3.BackgroundTransparency = 1
+					Tab3.Font = "FredokaOne"
+					Tab3.TextScaled = true
+					Tab3.Text = Name
+					Tab3.TextColor3 = Color3.new(1, 1, 1)
+					TabsNumberVariable.Value += 1
+				elseif SmallBackground.TabsNumber.Value == 3 then
+					Tab4 = Instance.new("TextButton")
+					Tab4.Parent = SmallBackground
+					Tab4.Name = "Tab" .. Name
+					Tab4.Size = UDim2.new(0, 75,0, 31)
+					Tab4.Position = UDim2.new(0.162, 0,0.641, 0)
+					Tab4.BackgroundTransparency = 1
+					Tab4.TextScaled = true
+					Tab4.Font = "FredokaOne"
+					Tab4.Text = Name
+					Tab4.TextColor3 = Color3.new(1, 1, 1)
+					TabsNumberVariable.Value += 1
+				elseif SmallBackground.TabsNumber.Value == 4 then
+					Tab5 = Instance.new("TextButton")
+					Tab5.Parent = SmallBackground
+					Tab5.Name = "Tab" .. Name
+					Tab5.Size = UDim2.new(0, 75,0, 31)
+					Tab5.Position = UDim2.new(0.162, 0,0.844, 0)
+					Tab5.BackgroundTransparency = 1
+					Tab5.Font = "FredokaOne"
+					Tab5.TextScaled = true
+					Tab5.Text = Name
+					Tab5.TextColor3 = Color3.new(1, 1, 1)
+					TabsNumberVariable.Value += 1
+				else
+					print("Error: Max tabs or incorect TabsNumber value!")
 				end
-			elseif SmallBackground:FindFirstChild("Tab5") then
-				print("Sorry current limit of tab is 5!")
-			elseif SmallBackground:FindFirstChild("Tab4") then
-				Tab5 = Instance.new("TextButton")
-				Tab5.Parent = SmallBackground
-				Tab5.Name = "Tab5"
-				MaxTabs = Instance.new("IntValue")
-				MaxTabs.Name = "MaxTabs"
-				MaxTabs.Parent = SmallBackground
-			elseif SmallBackground:FindFirstChild("Tab3") then
-				Tab4 = Instance.new("TextButton")
-				Tab4.Parent = SmallBackground
-				Tab4.Name = "Tab4"
-			elseif SmallBackground:FindFirstChild("Tab2") then
-				Tab3 = Instance.new("TextButton")
-				Tab3.Parent = SmallBackground
-				Tab3.Name = "Tab3"
-			elseif SmallBackground:FindFirstChild("Tab1") then
-				Tab2 = Instance.new("TextButton")
-				Tab2.Parent = SmallBackground
-				Tab2.Name = "Tab2"
-			else
-				Tab1 = Instance.new("TextButton")
-				Tab1.Parent = SmallBackground
-				Tab1.Name = "Tab1"
 			end
 		else
 			print("Will be soon! v2")
